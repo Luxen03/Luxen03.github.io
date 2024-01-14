@@ -1,35 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <style type="text/css">
+            html {
+                display: table;
+                margin: auto;
+            }
+            body {
+                transform: translateX(0px);
+                background-color: #111111;
+                overflow-x: hidden;
+            }
+            .menu-buttons {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
-</head>
+                animation: reset 1500ms forwards;
+                transform: translateY(100px);
+                filter: drop-shadow(5px 100px 5px #000);
+            }
 
-<body>
-    <div class="UI">
-        <div class="center">
+            button {
+                font-size: 24px;
+                width: 150px;
+                height: 50px;
+                margin: 5px;
+                background-color: #272727;
+                border: 5px solid #FBE6C3;
+                color: #FBE6C3;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: box-shadow 250ms;
+            }
+
+            button:hover {
+                box-shadow: 0px 0px 10px;
+            }
+
+            .panel {
+                text-align: center;
+                display: none;
+            }
+
+            .text {
+                display: none;
+            }
+
+            .center {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                color: #FBE6C3;
+
+                animation: show 2s ease-in forwards;
+                opacity: 0;
+            }
+
+            .logo {
+                animation: reset 1500ms forwards;
+                filter: drop-shadow(5px 250px 5px #000);
+                transform: translateY(-400px);
+            }
+
+            @keyframes reset { 100% {
+                filter: drop-shadow(5px 5px 5px #000);
+                transform: translateY(0px);
+            } }
+
+            @keyframes about-me { 100% {
+                transform: translateX(1920px);
+            } }
+            @keyframes show { 100% { opacity: 1; } }
+        </style>
+        <script type="text/javascript">
+            let panelState = "Closed";
+            function AboutMe(){
+                if (panelState == "AboutMe") return;
+                panelState = "AboutMe";
+                
+                document.getElementById("text").style.display = "block";
+                document.getElementById("test").innerHTML = "About Me";
+                document.getElementById("panel").style.display = "block";
+                document.getElementById("image").src = "Resume.jpg";
+            }
+            function Projects(){
+                if (panelState == "Projects") return;
+                panelState = "Projects";
+
+                document.getElementById("text").style.display = "none";
+                document.getElementById("test").innerHTML = "Projects";
+                document.getElementById("panel").style.display = "block";
+                document.getElementById("image").src = "Collage.jpg";
+            }
+        </script>
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div class="center" id="center">
             <div class="logo">
                 <img src="logo.png" width="500" height="500"/>
             </div>
-            <div class="box">
+            <div class="menu-buttons">
                 <div class="about-me">
-                    <div class="menu-buttons">ABOUT ME</div>
+                    <button onclick="AboutMe();">ABOUT ME</button>
                 </div>
                 <div class="projects">
-                    <div class="menu-buttons">PROJECTS</div>
+                    <button onclick="Projects();">PROJECTS</button>
                 </div>
             </div>
+            <h1 id="test">None Selected</h1>
+            <div class="panel" id="panel">
+                <div id="text">
+                    <br><br>
+                    <h1>Hello! My name is Angelo Justine D. Kamachi </h1>
+                    <h2>An aspiring game developer</h2><br>
+                    <h3>When I finish college, I plan to find a stable job that could give me money at a constant rate, I have a friend whose father is a senior manager of Oracle and they said they would help me get hired into their company. After getting a stable job, my 2nd entrepreneurial goal is to have a side job as a self hired game developer/modder, if my work brings me money and reputation it could get me hired through help from big programming communities. As my third entrepreneurial goal, I want to set my occupation as a permanent game developer and join/start a game development business with all the help I could get. With the ideas I have in mind when it comes to game development, I am hoping than my insight could reignite the passion of stale money-motivated game developing companies and someday maybe even revolutionize a new way to play games.</53>
+                    <br><br><br><br><br><br>
+                </div>
+                <img src="Resume.jpg" id="image"/>
+            </div>
         </div>
-        <div class="about-me-panel">
-            <img src="ABOUT-ME.png" width="1920" height="1080"/>
-        </div>
-        <div class="projects-panel">
-            <img src="PROJECTS.png" width="1920" height="1080"/>
-        </div>
-    </div>
-</body>
-
+    </body>
 </html>
