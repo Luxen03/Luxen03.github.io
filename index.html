@@ -50,6 +50,16 @@
             .text {
                 display: none;
             }
+            @media (width < 500px) {
+                button{
+                    visibility: hidden;
+                }
+                button:after{
+                    visibility: visible;
+                    content: "SCREEN TOO SMALL!!!";
+                    background-color: red;
+                }
+            }
 
             .center {
                 display: flex;
