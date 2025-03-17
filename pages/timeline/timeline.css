@@ -1,0 +1,122 @@
+html {
+    display: block;
+    margin: auto;
+}
+body {
+    background-color: #111111;
+    overflow-x: hidden;
+    width: auto;
+    margin: 0%;
+}
+
+button, h1, p {
+    font-family: 'Helvetica', Courier, monospace;
+    color: #FBE6C3;
+    background-color: transparent;
+    border: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #272727;
+    height: 3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    position: sticky;
+    top: 0;
+    background-color: #272727;
+    display: flex;
+    height: 3em;
+}
+
+.headerButton {
+    font-size: larger;
+}
+
+.headerButton:hover {
+    font-weight: bold;
+    color: aqua;
+}
+
+.headerButtons {
+    display: flex;
+    height: 100%;
+    width: fit-content;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+
+.info {
+    width: 50%;
+}
+
+.logo {
+    width: 3em;
+    height: 3em;
+}
+
+.mediaContainer {
+    width: 20%;
+    aspect-ratio : 1 / 1;
+    margin: 10px;
+    overflow: hidden;
+    border: 0.3em solid transparent;
+    transition: 0.2s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mediaContainer:hover {
+    width: 50em;
+    height: 50em;
+    border: 0.3em solid #FBE6C3;
+}
+
+.media {
+    object-fit: contain;
+    height: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+    .name {
+        display: none;
+    }
+}
+
+.profile {
+    align-items: center;
+    display: flex;
+    margin-left: 2%;
+    overflow: hidden;
+    border: 0.3em solid transparent;
+}
+
+.profile:hover {
+    border: 0.3em solid aliceblue;
+    border-radius: 2em;
+}
+
+.segmentElement {
+    width: 80%;
+    background-color: #272727;
+    border: 0.3em solid #FBE6C3;
+    border-radius: 1em;
+    margin: 3% auto auto auto;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.project {
+    display: flex;
+    background-color: #272727;
+    border: 0.3em solid #FBE6C3;
+    padding: 3%;
+    overflow: hidden;
+    justify-content: space-between;
+}

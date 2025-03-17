@@ -1,0 +1,106 @@
+html {
+    display: block;
+    margin: auto;
+}
+body {
+    background-color: #111111;
+    overflow-x: hidden;
+    width: auto;
+    margin: 0%;
+}
+
+.background {
+    background-color: aliceblue;
+    height: 10em;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+}
+
+button, h1, h2, h3, h4, h5, h6, p, a {
+    font-family: 'Helvetica', Courier, monospace;
+    background-color: transparent;
+    border: none;
+    color: rgb(198, 224, 124);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    background-color: #272727;
+    width: 100%;
+    height: 3em;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+}
+
+footer {
+    font-size: small;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    height: 1.2em;
+    z-index: 5;
+    background-color: #272727;
+    color: rgb(198, 224, 124);
+    text-align: center;
+}
+
+ul {
+    margin: 0%;
+}
+
+p > a {
+    color: rgb(224, 235, 194);
+    text-decoration: none;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+.headerButtons > li > a {
+    font-size: larger;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.headerButtons > li > a:hover {
+    color: aqua;
+}
+
+.headerButtons > li > a > img:hover {
+    filter: brightness(0) saturate(100%) invert(86%) sepia(12%) saturate(7494%) hue-rotate(127deg) brightness(103%) contrast(106%);
+}
+
+.headerButtons > li > a > img {
+    width: 1.5em;
+    filter: brightness(0) saturate(100%) invert(87%) sepia(31%) saturate(578%) hue-rotate(23deg) brightness(99%) contrast(85%);
+}
+
+.headerButtons {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: fit-content;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+
+.info {
+    width: 50%;
+}
+
+@keyframes textAppear {
+    0% {
+      transform: translateX(100px);
+      color: transparent;
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
