@@ -2,7 +2,7 @@ async function LoadTimeline() {
     //load necessities
     const parser = new DOMParser();
     const timeline = document.getElementById("content")
-    const timelineXML = await fetch("data/timeline.xml")
+    const timelineXML = await fetch("../../data/timeline.xml")
         .then((res) => res.text())
         .then((text) => parser.parseFromString(text, "text/xml"))
         .then((xml) => xml.querySelector("timeline"));
@@ -43,7 +43,7 @@ async function LoadTimeline() {
                 case "img":
                     const img = document.createElement("img");
                     img.className = "media";
-                    img.src = project.querySelector("mediaPath").textContent;
+                    img.src = "../../" + project.querySelector("mediaPath").textContent;
                     mediaContainer.appendChild(img);
                     break;
                 default:
@@ -63,3 +63,4 @@ async function LoadTimeline() {
 }
 
 LoadTimeline();
+console.log("Timeline loaded");
