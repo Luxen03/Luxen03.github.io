@@ -1,0 +1,9 @@
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: white;
+    font-family: Arial, sans-serif;
+}

@@ -1,0 +1,97 @@
+.rainbow-border {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+
+    margin: 0%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rainbow-border>li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: linear-gradient(to right, gold, gray, gold);
+
+    background-size: 200%;
+    margin: 0px 5px 0px 5px;
+    border-radius: 15px;
+    box-shadow: 3px 3px black;
+    transition: transform 0.3s, opacity 2s;
+    padding: 2px;
+    max-width: 500px;
+
+    animation: gradient 3s linear infinite;
+}
+
+@keyframes gradient {
+    to {
+        background-position: 200%;
+    }
+}
+
+.rainbow-border>li>div {
+    justify-content: center;
+    align-items: flex-start;
+
+    background-color: #271b1b;
+
+    border-radius: 15px;
+    box-shadow: inset 3px 3px black;
+    height: 100%;
+}
+
+.rainbow-border>li>div>a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lucida Sans Unicode';
+    text-decoration: none;
+
+    color: white;
+
+    margin: 0px 5px 0px 5px;
+    padding: 3px;
+}
+
+.rainbow-border>li:hover {
+    background-image: linear-gradient(to right, cyan, gray, cyan);
+    transform: translateY(2px);
+}
+
+.show {
+    opacity: 1;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.ratio-shell {
+    background-color: rgb(63, 63, 63);
+    box-shadow: inset 3px 3px rgb(51, 51, 51);
+
+    border-radius: 5px;
+    height: 10px;
+    width: 100%;
+    min-width: 150px;
+}
+
+.ratio-kernel {
+    background-image: linear-gradient(to right, cyan, gray, cyan);
+    background-size: 200%;
+    animation: gradient 3s linear infinite;
+
+    transition: 2s;
+    border-radius: 5px;
+    height: 100%;
+}
